@@ -3,32 +3,163 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/e3e6fa4128.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 		<title>01 Add Bootstrap To Your Website</title>
 	</head>
 	<body>
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand">
-                <i class="fa-brands fa-instagram"></i>
-                Instagram
-            </a>
-            <div>
-                <button type="button" class="btn btn-success">Create a new post</button>
-                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
-
+      <div class="container-fluid">
+            <nav class="navbar bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand">
+                  <i class="fa-brands fa-instagram"></i>
+                  Instagram
+                </a>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: auto;">
+                  Create a new post
+                </button>
+               
+                
+                  
+                  <div class="position-relative">
+                    
+                    <a class="btn btn-secondary " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="fa-solid fa-gear"></i>
+                    </a>
+                    <div class="collapse position-absolute" id="collapseExample" style="z-index: 1;">
+                      <ul class="list-group">
+                        <li class="list-group-item">Profile</li>
+                        <li class="list-group-item">Accessibility</li>
+                        <li class="list-group-item">Privacy and Data</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+                  
+                
+              
+            </nav>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>Caption:</h5>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Add the caption of your post here" aria-label="Recipient's username" aria-describedby="basic-addon2">
             </div>
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></i></button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+                  
+                <ul class="nav nav-pills mb-3" style="display: flex; justify-content: center; margin-top: 12px;" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="btn btn-light" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-controls="pills-home" aria-selected="true">
+                      <i class="fa-solid fa-table-cells "></i>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class=" btn btn-light" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                      <i class="fa-solid fa-square ml-2"></i>
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                      <div class="row align-items-start mb-4">
+                        <div class="col-4 justify-content-center">
+                            <img src="https://fastly.picsum.photos/id/559/200/200.jpg?hmac=YMqBxDHO4-upCRoX_Ho2FNQg40ANP2MndFXD8sPsSAc" alt="" width="100%">
+                          </div>
+                        <div class="col-4 justify-content-center">
+                          <img src="https://fastly.picsum.photos/id/617/200/200.jpg?hmac=hA4FoiLXjwqHcRxZZSlEI_ruilvP8o_m7FsJ-JD4t4I" alt="" width="100%" >
+                        </div>
+                        <div class="col-4 justify-content-center">
+                          <img src="https://fastly.picsum.photos/id/192/200/200.jpg?hmac=ADFozPC7IeAOBiVxD2ZbHYkpCVEa8Xj_tZE_Dm7yFuo"  alt="" width="100%">
+                        </div>
+                    </div>
+                    <div class="row align-items-start mb-4">
+                      <div class="col-4 justify-content-center">
+                          <img src="https://fastly.picsum.photos/id/518/200/200.jpg?hmac=nY2cAnZ0_ItWhhAsJ_XL3RsNkDo7_zobodK8FWIoCDM" alt="" width="100%">
+                        </div>
+                      <div class="col-4 justify-content-center">
+                        <img src="https://fastly.picsum.photos/id/806/200/200.jpg?hmac=Bjuj5EjPlNaE2kT8ABN920giQlNy0lKelxx9zh5rrhw" alt="" width="100%" >
+                      </div>
+                      <div class="col-4 justify-content-center">
+                        <img src="https://fastly.picsum.photos/id/283/200/200.jpg?hmac=Qyx_FaWqQPrmQrGhQNKh2t2FUuwTiMNTS1VCkc86YrM"  alt="" width="100%">
+                      </div>
+                  </div>
+                  <div class="row align-items-start mb-4">
+                    <div class="col-4 justify-content-center">
+                        <img src="https://fastly.picsum.photos/id/999/200/200.jpg?hmac=iwXALEStJtHL4Thxk_YbLNHNmjq9ZrIQYFUvtxndOaU" alt="" width="100%">
+                      </div>
+                    <div class="col-4 justify-content-center">
+                      <img src="https://fastly.picsum.photos/id/664/200/200.jpg?hmac=d8ZWM7R6VABV4JdJPvmCOGPqq3E6KTIFDz-FYp73TJo" alt="" width="100%" >
+                    </div>
+                    <div class="col-4 justify-content-center">
+                      <img src="https://fastly.picsum.photos/id/311/200/200.jpg?hmac=CHiYGYQ3Xpesshw5eYWH7U0Kyl9zMTZLQuRDU4OtyH8"  alt="" width="100%">
+                    </div>
+                </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div class="w-100 d-flex justify-content-center flex-column align-items-center gap-5">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                          <div>
+                            <h5 class="card-title">My favorite pic</h5>
+                          </div>
+                          <div>
+                            <p>12/5</p>
+                          </div>
+                        </div>
+                        <img src="https://fastly.picsum.photos/id/559/200/200.jpg?hmac=YMqBxDHO4-upCRoX_Ho2FNQg40ANP2MndFXD8sPsSAc" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                          <div>
+                            <h5 class="card-title">My favorite pic</h5>
+                          </div>
+                          <div>
+                            <p>12/5</p>
+                          </div>
+                        </div>
+                        <img src="https://fastly.picsum.photos/id/617/200/200.jpg?hmac=hA4FoiLXjwqHcRxZZSlEI_ruilvP8o_m7FsJ-JD4t4I" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                          <div>
+                            <h5 class="card-title">My favorite pic</h5>
+                          </div>
+                          <div>
+                            <p>12/5</p>
+                          </div>
+                        </div>
+                        <img src="https://fastly.picsum.photos/id/192/200/200.jpg?hmac=ADFozPC7IeAOBiVxD2ZbHYkpCVEa8Xj_tZE_Dm7yFuo" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                
             </div>
-        </nav>
-        <div class="d-flex justify-content-center">
-            <i class="fa-solid fa-table-cells mt-4"></i>
-            <i class="fa-solid fa-square ml-2 mt-4"></i>
-        </div>
-
-        <div class="row -3 ml-4git add .">
-            <img src="https://fastly.picsum.photos/id/568/200/200.jpg?hmac=WhQYW7EIDNOKVDzKmVpIoRPPwgeIbNL8YOGoTCcCI7o">
-
-        </div>
 	</body>
 </html>
